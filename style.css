@@ -323,7 +323,7 @@
 
 .formSection {
   position: relative;
-  background-color: #e2e8f0;
+  background-color: #edf2f7;
   padding-top: 20px;
   padding-bottom: 50px;
   z-index: 1;
@@ -337,18 +337,27 @@
   right: 0;
   height: 40px;
   border-radius: 0px 0px 30px 30px;
-  background-color: #e2e8f0;
+  background-color: #edf2f7;
   width: 100%;
 }
 .formSection .back-button {
   position: absolute;
-  bottom: -25px;
+  bottom: -15px;
   left: 0;
   right: 0;
   z-index: 8;
 }
 .formSection .formContent {
   padding: 65px 0px;
+}
+.formSection img.element-wave {
+  position: absolute;
+  top: 102.6%;
+  max-width: 270px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 2;
 }
 .formSection img.element-oval {
   position: absolute;
@@ -445,6 +454,10 @@
   margin-top: 15px;
 }
 @media (min-width: 576px) {
+  .formSection img.element-wave {
+    top: 105%;
+    max-width: 350px;
+  }
   .formSection::after {
     height: 50px;
     border-radius: 0px 0px 50px 50px;
@@ -455,6 +468,10 @@
   }
 }
 @media (min-width: 768px) {
+  .formSection img.element-wave {
+    top: 105.8%;
+    max-width: 400px;
+  }
   .formSection::after {
     height: 60px;
     border-radius: 0px 0px 50px 50px;
@@ -469,10 +486,17 @@
   .formSection select {
     font-size: 12px;
   }
+  .formSection .back-button {
+    bottom: -50px;
+  }
 }
 @media (min-width: 992px) {
   .formSection {
     margin-bottom: 140vh;
+  }
+  .formSection img.element-wave {
+    top: 106%;
+    max-width: 500px;
   }
   .formSection .card-form h3:nth-child(1) {
     font-weight: 900;
@@ -510,8 +534,14 @@
     bottom: 10%;
     border-radius: 20px;
   }
+  .formSection .back-button {
+    bottom: -50px;
+  }
 }
 @media (min-width: 1200px) {
+  .formSection img.element-wave {
+    top: 115.5%;
+  }
   .formSection .formContent {
     padding: 25px;
     margin-top: 80px;
@@ -531,9 +561,15 @@
     display: flex;
     align-items: center;
   }
+  .formSection .back-button {
+    bottom: -120px;
+  }
 }
 
 @media (min-width: 1400px) {
+  .formSection img.element-wave {
+    top: 114.8%;
+  }
   .formSection {
     margin-bottom: 0vh;
   }
@@ -551,8 +587,11 @@
   .formSection .image-form .background-form {
     bottom: 8%;
   }
+  .formSection .back-button {
+    bottom: -120px;
+  }
   .formSection button {
-    font-size: 16px;
+    font-size: 18px;
   }
   .formSection h3 {
     font-size: 32px;
