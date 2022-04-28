@@ -314,7 +314,6 @@
 
 /* END NAVBAR */
 
-/* FORM SECTION */
 /* ----------------------------------------------------------------------------------------------------------- */
 /* ----------------------------------------------------------------------------------------------------------- */
 /* ------FORM SECTION--------------------------FORM SECTION-----------------------------FORM SECTION---------- */
@@ -324,10 +323,8 @@
 .formSection {
   position: relative;
   background-color: #edf2f7;
-  padding-top: 20px;
-  padding-bottom: 50px;
-  z-index: 1;
   font-family: "Inter", sans-serif;
+  z-index: 1;
 }
 .formSection::after {
   content: "";
@@ -342,17 +339,20 @@
 }
 .formSection .back-button {
   position: absolute;
-  bottom: -15px;
+  bottom: -30px;
   left: 0;
   right: 0;
   z-index: 8;
+}
+.formSection .back-button .teks {
+  font-size: 13px !important;
 }
 .formSection .formContent {
   padding: 65px 0px;
 }
 .formSection img.element-wave {
   position: absolute;
-  top: 102.6%;
+  top: 102%;
   max-width: 270px;
   left: 0;
   right: 0;
@@ -417,7 +417,7 @@
 
 .formSection .card-form {
   /* box-shadow: -10px -10px 25px #f1f8ff, 10px 10px 15px rgba(0, 0, 0, 0.1); */
-  box-shadow: 5px 5px 25px rgba(117, 117, 117, 0.1);
+  box-shadow: 5px 5px 25px rgba(121, 121, 121, 0.1);
   transition: 2s;
   background-color: white;
   border-radius: 20px;
@@ -428,21 +428,29 @@
   font-weight: 800;
 }
 .formSection .card-form h3:nth-child(1) span {
-  color: #ffc42f;
+  color: #f29e01;
 }
 
 .formSection input,
-.formSection select {
+.formSection select,
+.formSection textarea {
   border: 1px solid #ededed;
-  background-color: #f7fafc;
-  color: #a0aec0;
-  font-size: 12px;
+  background-color: white;
+  color: #4a5568;
+  font-size: 15px;
   padding: 7px 10px;
   margin-top: 5px;
 }
 .formSection input::placeholder {
   color: #a0aec0;
 }
+.formSection input:not([value=""]):not(:focus):invalid {
+  background-color: #f7fafc;
+}
+.formSection textarea:not([value=""]):not(:focus):invalid {
+  background-color: #f7fafc;
+}
+
 .formSection label {
   color: #2d3748;
   font-weight: 700;
@@ -451,7 +459,7 @@
 .formSection button {
   color: #2d3748;
   font-weight: 600;
-  margin-top: 15px;
+  margin-top: 40px;
 }
 @media (min-width: 576px) {
   .formSection img.element-wave {
@@ -465,6 +473,9 @@
   .formSection .image-form .background-form {
     height: 280px;
     width: 250px;
+  }
+  .formSection .back-button .teks {
+    font-size: 14px !important;
   }
 }
 @media (min-width: 768px) {
@@ -483,11 +494,15 @@
     font-size: 16px;
   }
   .formSection input,
-  .formSection select {
+  .formSection select,
+  .formSection textarea {
     font-size: 12px;
   }
   .formSection .back-button {
-    bottom: -50px;
+    bottom: -60px;
+  }
+  .formSection .back-button .teks {
+    font-size: 15px !important;
   }
 }
 @media (min-width: 992px) {
@@ -495,7 +510,7 @@
     margin-bottom: 140vh;
   }
   .formSection img.element-wave {
-    top: 106%;
+    top: 105.5%;
     max-width: 500px;
   }
   .formSection .card-form h3:nth-child(1) {
@@ -507,7 +522,8 @@
     font-size: 13px;
   }
   .formSection input,
-  .formSection select {
+  .formSection select,
+  .formSection textarea {
     font-size: 11px;
   }
   .formSection .image-form {
@@ -535,16 +551,19 @@
     border-radius: 20px;
   }
   .formSection .back-button {
-    bottom: -50px;
+    bottom: -60px;
+  }
+  .formSection .back-button .teks {
+    font-size: 16px !important;
   }
 }
 @media (min-width: 1200px) {
   .formSection img.element-wave {
-    top: 115.5%;
+    top: 114%;
   }
-  .formSection .formContent {
-    padding: 25px;
-    margin-top: 80px;
+  .formSection .card-form h3:nth-child(1) {
+    font-weight: 900;
+    font-size: 28px;
   }
   .formSection::after {
     height: 130px;
@@ -562,23 +581,31 @@
     align-items: center;
   }
   .formSection .back-button {
-    bottom: -120px;
+    bottom: -130px;
+  }
+  .formSection .back-button .teks {
+    font-size: 17px !important;
   }
 }
 
 @media (min-width: 1400px) {
-  .formSection img.element-wave {
-    top: 114.8%;
-  }
   .formSection {
     margin-bottom: 0vh;
   }
+  .formSection .card-form h3:nth-child(1) {
+    font-weight: 900;
+    font-size: 32px;
+  }
+  .formSection img.element-wave {
+    top: 113%;
+  }
   .formSection input,
-  .formSection select {
-    font-size: 13px;
+  .formSection select,
+  .formSection textarea {
+    font-size: 15px;
   }
   .formSection label {
-    font-size: 18px;
+    font-size: 15px;
   }
   .formSection .image-form img {
     max-height: 550px;
@@ -587,14 +614,15 @@
   .formSection .image-form .background-form {
     bottom: 8%;
   }
-  .formSection .back-button {
-    bottom: -120px;
-  }
   .formSection button {
     font-size: 18px;
   }
-  .formSection h3 {
-    font-size: 32px;
+  .formSection .back-button {
+    font-size: 18px !important;
+    bottom: -120px;
+  }
+  .formSection .back-button .teks {
+    font-size: 18px !important;
   }
 }
 /* END FORM SECTION */
